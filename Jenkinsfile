@@ -21,9 +21,11 @@ pipeline {
       }
       stage('Docker Build and Push') {
         steps {
-          sh 'printenv'
-          sh 'docker build samishken/numeric-app:""$GIT_COMMIT"" .'
-          sh 'docker push samishken/numeric-app: ""$GIT_COMMIT""'
+          withDockerRegistry([credentialsId: "Dockerhub", url: ""]) {
+            sh 'printenv'
+            sh 'sudo docker build -t samishken/numeric-app:""$GIT_COMMIT"" .'
+            sh 'docker push samishken/numeric-app:""$GIT_COMMIT""'
+          }
         }
       }
     }
