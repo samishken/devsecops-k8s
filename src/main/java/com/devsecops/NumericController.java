@@ -25,11 +25,6 @@ public class NumericController {
 	@RestController
 	public class compare {
 
-		@GetMapping("/increment")
-		public int incremen() {
-			return "Hello, World!";
-		}
-
 		@GetMapping("/")
 		public String welcome() {
 			return "Kubernetes DevSecOps";
