@@ -25,7 +25,7 @@ public class NumericController {
 	@RestController
 	public class compare {
 
-		@GetMapping("/hello")
+		@GetMapping("/increment")
 		public String sayHello() {
 			return "Hello, World!";
 		}
