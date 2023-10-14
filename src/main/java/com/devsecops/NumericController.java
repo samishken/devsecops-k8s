@@ -25,14 +25,19 @@ public class NumericController {
 	@RestController
 	public class compare {
 
+		@GetMapping("/hello")
+		public String sayHello() {
+			return "Hello, World!";
+		}
+		
 		@GetMapping("/")
 		public String welcome() {
 			return "Kubernetes DevSecOps";
 		}
 
-		@GetMapping("/increment/")
-		public String welcome() {
-			return "increament"
+		@GetMapping("/increment")
+		public String greetUser(@RequestParam(name = "name", defaultValue = "User") String name) {
+			return "Hello, " + name + "!";
 		}
 
 		@GetMapping("/compare/{value}")
