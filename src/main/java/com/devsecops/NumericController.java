@@ -29,15 +29,10 @@ public class NumericController {
 		public String sayHello() {
 			return "Hello, World!";
 		}
-		
+
 		@GetMapping("/")
 		public String welcome() {
 			return "Kubernetes DevSecOps";
-		}
-
-		@GetMapping("/increment")
-		public String greetUser(@RequestParam(name = "name", defaultValue = "User") String name) {
-			return "Hello, " + name + "!";
 		}
 
 		@GetMapping("/compare/{value}")
