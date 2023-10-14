@@ -30,9 +30,9 @@ public class NumericController {
 			return "Kubernetes DevSecOps";
 		}
 
-		@GetMapping("/increment/{value}")
+		@GetMapping("/increment/")
 		public String welcome() {
-			return value
+			return "increament"
 		}
 
 		@GetMapping("/compare/{value}")
