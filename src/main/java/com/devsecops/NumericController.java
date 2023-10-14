@@ -32,7 +32,7 @@ public class NumericController {
 
 		@GetMapping("/increment/{value}")
 		public String welcome() {
-			return "hello " + value
+			return value
 		}
 
 		@GetMapping("/compare/{value}")
